@@ -125,8 +125,8 @@
                 },
                 {
                     "name": "",
-                    "id": "f01a8d99-825a-4153-a105-cc3e194cce50",
-                    "path": "<Accelerometer>/acceleration",
+                    "id": "35fa14e9-5c43-4b80-a5c8-043abc04dfa6",
+                    "path": "<Gyroscope>/angularVelocity",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

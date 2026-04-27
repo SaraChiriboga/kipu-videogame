@@ -1,80 +1,118 @@
 using UnityEngine;
+using Steamworks;
 using UnityEngine.InputSystem;
 
 public class AmadaMovement : MonoBehaviour
 {
-    [Header("Configuración")]
+    [Header("Configuración Física")]
     public float velocidad = 7f;
     public float fuerzaSalto = 12f;
-    public float sensibilidadGiro = 5.0f;
+
+    [Header("Configuración Equilibrio")]
+    public float sensibilidadGiro = 1.5f;
+    public float sensibilidadMouse = 0.2f;
 
     private Rigidbody2D rb;
     private Animator anim;
-    private float inputX;
-    private float inclinacionGiroscopio;
-
-    public bool recibirHueso = false;
-    public bool isStumbling = false;
+    private float moveInput;
+    private float balanceGiroscopio;
+    private bool steamInicializado = false;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
-        // 1. ACTIVAR SENSORES DE FORMA SEGÚRA (Sin ambigüedades)
-        // Usamos el nombre completo para que Unity no se confunda
-        if (UnityEngine.InputSystem.Accelerometer.current != null)
-            InputSystem.EnableDevice(UnityEngine.InputSystem.Accelerometer.current);
-
-        if (UnityEngine.InputSystem.GravitySensor.current != null)
-            InputSystem.EnableDevice(UnityEngine.InputSystem.GravitySensor.current);
-    }
-
-    public void OnMove(InputValue value)
-    {
-        inputX = value.Get<Vector2>().x;
-    }
-
-    public void OnJump(InputValue value)
-    {
-        if (value.isPressed && !isStumbling && Mathf.Abs(rb.linearVelocity.y) < 0.01f)
+        try
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
+            steamInicializado = SteamAPI.Init();
+            if (steamInicializado)
+            {
+                Debug.Log("<color=green>Steamworks: Conectado.</color>");
+                // Forzamos a Steam a que empiece a mandar datos de mando
+                SteamInput.Init(false);
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError("Error Steamworks: " + e.Message);
         }
     }
 
-    // Asegúrate de que en el Action Map, el binding de Giroscopio 
-    // apunte a "Gravity [Sensor]" o "Accelerometer [Sensor]"
-    public void OnGiroscopio(InputValue value)
+    void Update()
     {
-        Vector3 gravityData = value.Get<Vector3>();
+        // 1. MOVIMIENTO LATERAL
+        float moveTeclado = 0f;
+        if (Keyboard.current != null)
+        {
+            if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed) moveTeclado = 1f;
+            else if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed) moveTeclado = -1f;
+        }
 
-        // En el mando de PS5, el eje X suele representar la inclinación lateral
-        inclinacionGiroscopio = gravityData.x;
+        float moveMando = (Gamepad.current != null) ? Gamepad.current.leftStick.x.ReadValue() : 0f;
+        moveInput = Mathf.Abs(moveMando) > 0.1f ? moveMando : moveTeclado;
+
+        // 2. SALTO (EL MÉTODO QUE ME COMÍ)
+        bool intentandoSaltar = false;
+        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame) intentandoSaltar = true;
+        if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame) intentandoSaltar = true;
+
+        if (intentandoSaltar && Mathf.Abs(rb.linearVelocity.y) < 0.01f)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
+        }
+
+        // 3. BALANCE (MOUSE + GYRO)
+        float balanceMouse = 0f;
+        if (Mouse.current != null && Mouse.current.leftButton.isPressed) // Solo balancea si haces clic o mueves mucho
+        {
+            balanceMouse = Mouse.current.delta.x.ReadValue() * sensibilidadMouse;
+        }
+
+        if (steamInicializado)
+        {
+            SteamAPI.RunCallbacks();
+            InputHandle_t[] handles = new InputHandle_t[Constants.STEAM_INPUT_MAX_COUNT];
+            int count = SteamInput.GetConnectedControllers(handles);
+
+            if (count > 0)
+            {
+                // SteamInput.GetMotionData es lo que necesitamos
+                InputMotionData_t motion = SteamInput.GetMotionData(handles[0]);
+
+                // Sumamos los tres ejes de rotación para encontrar cuál es el tuyo
+                // rotVelX, rotVelY, rotVelZ (Velocidad Angular)
+                float rawGyro = motion.rotVelX + motion.rotVelY + motion.rotVelZ;
+
+                balanceGiroscopio = rawGyro * sensibilidadGiro;
+
+                // Debug ultra sensible para ver si el mando respira
+                if (Mathf.Abs(rawGyro) > 0.0001f)
+                {
+                    Debug.Log($"<color=yellow>GYRO VIVO -> Val: {rawGyro:F4}</color>");
+                }
+            }
+        }
+
+        // 4. ANIMACIÓN
+        if (anim != null)
+        {
+            float balanceTotal = Mathf.Clamp(moveInput + balanceGiroscopio + balanceMouse, -1f, 1f);
+            anim.SetFloat("Inclinacion", balanceTotal);
+            anim.SetBool("isMoving", Mathf.Abs(moveInput) > 0.1f);
+
+            if (moveInput > 0.1f) transform.localScale = Vector3.one;
+            else if (moveInput < -0.1f) transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 
     void FixedUpdate()
     {
-        if (isStumbling)
-        {
-            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-            return;
-        }
+        rb.linearVelocity = new Vector2(moveInput * velocidad, rb.linearVelocity.y);
+    }
 
-        rb.linearVelocity = new Vector2(inputX * velocidad, rb.linearVelocity.y);
-
-        if (anim != null)
-        {
-            anim.SetBool("isMoving", inputX != 0);
-
-            // Combinamos el input del stick y el giro físico del mando
-            float balanceFinal = inputX + (inclinacionGiroscopio * sensibilidadGiro);
-            balanceFinal = Mathf.Clamp(balanceFinal, -1f, 1f);
-
-            anim.SetFloat("Inclinacion", balanceFinal);
-
-            if (inputX > 0.1f) transform.localScale = Vector3.one;
-            else if (inputX < -0.1f) transform.localScale = new Vector3(-1, 1, 1);
-        }
+    void OnDestroy()
+    {
+        if (steamInicializado) SteamAPI.Shutdown();
     }
 }
