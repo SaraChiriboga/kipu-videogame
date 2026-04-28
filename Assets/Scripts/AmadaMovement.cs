@@ -15,8 +15,11 @@ public class AmadaMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private float moveInput;
-    private float balanceGiroscopio;
+    public float balanceGiroscopio;
     private bool steamInicializado = false;
+
+    private InputHandle_t[] handles = new InputHandle_t[Constants.STEAM_INPUT_MAX_COUNT];
+    private int controllerCount = 0;
 
     void Awake()
     {
@@ -29,7 +32,6 @@ public class AmadaMovement : MonoBehaviour
             if (steamInicializado)
             {
                 Debug.Log("<color=green>Steamworks: Conectado.</color>");
-                // Forzamos a Steam a que empiece a mandar datos de mando
                 SteamInput.Init(false);
             }
         }
@@ -41,7 +43,13 @@ public class AmadaMovement : MonoBehaviour
 
     void Update()
     {
-        // 1. MOVIMIENTO LATERAL
+        if (steamInicializado)
+        {
+            SteamAPI.RunCallbacks();
+            controllerCount = SteamInput.GetConnectedControllers(handles);
+        }
+
+        // ─── 1. MOVIMIENTO LATERAL ───────────────────────────────────────────
         float moveTeclado = 0f;
         if (Keyboard.current != null)
         {
@@ -49,10 +57,18 @@ public class AmadaMovement : MonoBehaviour
             else if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed) moveTeclado = -1f;
         }
 
-        float moveMando = (Gamepad.current != null) ? Gamepad.current.leftStick.x.ReadValue() : 0f;
+        float moveMando = 0f;
+        if (Gamepad.current != null)
+        {
+            moveMando = Gamepad.current.leftStick.x.ReadValue();
+
+            if (Mathf.Abs(moveMando) > 0.1f)
+                Debug.Log($"<color=cyan>STICK Unity: {moveMando:F3}</color>");
+        }
+
         moveInput = Mathf.Abs(moveMando) > 0.1f ? moveMando : moveTeclado;
 
-        // 2. SALTO (EL MÉTODO QUE ME COMÍ)
+        // ─── 2. SALTO ────────────────────────────────────────────────────────
         bool intentandoSaltar = false;
         if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame) intentandoSaltar = true;
         if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame) intentandoSaltar = true;
@@ -62,39 +78,31 @@ public class AmadaMovement : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
         }
 
-        // 3. BALANCE (MOUSE + GYRO)
+        // ─── 3. BALANCE (MOUSE + GYRO) ───────────────────────────────────────
         float balanceMouse = 0f;
-        if (Mouse.current != null && Mouse.current.leftButton.isPressed) // Solo balancea si haces clic o mueves mucho
+        if (Mouse.current != null && Mouse.current.leftButton.isPressed)
         {
             balanceMouse = Mouse.current.delta.x.ReadValue() * sensibilidadMouse;
         }
 
-        if (steamInicializado)
+        if (steamInicializado && controllerCount > 0)
         {
-            SteamAPI.RunCallbacks();
-            InputHandle_t[] handles = new InputHandle_t[Constants.STEAM_INPUT_MAX_COUNT];
-            int count = SteamInput.GetConnectedControllers(handles);
+            InputMotionData_t motion = SteamInput.GetMotionData(handles[0]);
 
-            if (count > 0)
+            float gyroX = motion.rotVelX;
+            float gyroY = motion.rotVelY;
+            float gyroZ = motion.rotVelZ;
+            float rawGyro = gyroX + gyroY + gyroZ;
+
+            balanceGiroscopio = rawGyro * sensibilidadGiro;
+
+            if (Mathf.Abs(rawGyro) > 0.0001f)
             {
-                // SteamInput.GetMotionData es lo que necesitamos
-                InputMotionData_t motion = SteamInput.GetMotionData(handles[0]);
-
-                // Sumamos los tres ejes de rotación para encontrar cuál es el tuyo
-                // rotVelX, rotVelY, rotVelZ (Velocidad Angular)
-                float rawGyro = motion.rotVelX + motion.rotVelY + motion.rotVelZ;
-
-                balanceGiroscopio = rawGyro * sensibilidadGiro;
-
-                // Debug ultra sensible para ver si el mando respira
-                if (Mathf.Abs(rawGyro) > 0.0001f)
-                {
-                    Debug.Log($"<color=yellow>GYRO VIVO -> Val: {rawGyro:F4}</color>");
-                }
+                Debug.Log($"<color=yellow>GYRO — X: {gyroX:F4} | Y: {gyroY:F4} | Z: {gyroZ:F4} | Total: {rawGyro:F4}</color>");
             }
         }
 
-        // 4. ANIMACIÓN
+        // ─── 4. ANIMACIÓN ────────────────────────────────────────────────────
         if (anim != null)
         {
             float balanceTotal = Mathf.Clamp(moveInput + balanceGiroscopio + balanceMouse, -1f, 1f);
