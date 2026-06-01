@@ -1,0 +1,774 @@
+fileFormatVersion: 2
+guid: e4a78506cc4dcc446bb32afc638eb575
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1985
+        width: 194
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625e3af33c6ae604185c950df36c8272
+      internalID: 742803607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1985
+        width: 195
+        height: 343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a3de2f1484bf040a4dc2d1bd4d1e06
+      internalID: 590804170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 1984
+        width: 197
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f67ce4f5cff7de24c9e4c647843c121e
+      internalID: 1265020619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 1985
+        width: 194
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05d30ea9d927d794084eca388c2567ad
+      internalID: -50647459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1601
+        width: 195
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf3c450b9586eba46a845f1cdb8fb484
+      internalID: 710663253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 1602
+        width: 192
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 260757d637ef4a04d888da204874efa0
+      internalID: -1826997732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1600
+        width: 184
+        height: 347
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c41eb57f093a34494bdb2ba536a0be
+      internalID: -838688793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 1608
+        width: 198
+        height: 339
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b367affb15d13ea41a340e8791e393f5
+      internalID: -1691866862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 1595
+        width: 198
+        height: 324
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6dc5d0c738c68246be9d841dee5cd3d
+      internalID: -1915384805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1197
+        width: 188
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af3ddcbb3b6290a4f8297e2835e6ed53
+      internalID: 415537225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 1197
+        width: 204
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de47c549fd93f74f929b13965130a2b
+      internalID: 715391329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 817
+        width: 305
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 1, z: 15, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd017836d7b8ab4a8fb24aaec0d9efa
+      internalID: -925784376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 1197
+        width: 188
+        height: 356
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e98a4a01b07574da62fd317255186b
+      internalID: 613628204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 1196
+        width: 191
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef627bb97400b79448495928c1d596e2
+      internalID: -1174383991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 817
+        width: 293
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5553ea9593481da42ad2b4ac177409bf
+      internalID: 1033048339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 816
+        width: 290
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c05643b4e7520488ca4023f8b55295
+      internalID: 2081240641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 817
+        width: 294
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcaa5c597687504dac35367f8d638f6
+      internalID: 235754411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 815
+        width: 189
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2559fee3ebd5c1c47aac760095e97878
+      internalID: -1820134370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 432
+        width: 183
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72050ea904d1d4b4cadfacb6f837642f
+      internalID: 18840504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 432
+        width: 192
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4c332efc46c354a8e9eeb9e5f7f6bf
+      internalID: 1936084171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 432
+        width: 188
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992ba0d2392b27146b1a3790ef953e47
+      internalID: 1579447222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 432
+        width: 214
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ac47cc293949444a1c0e3ff6225958
+      internalID: -511786114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 54
+        width: 172
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1131584acf90aef4fbb3ca0176294403
+      internalID: 287739789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 54
+        width: 171
+        height: 339
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86be29846dac7bb43a0d27b826fea578
+      internalID: -1740536445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 54
+        width: 171
+        height: 339
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e60ac0af9063584aa78e817d0d2665c
+      internalID: 90712977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 49
+        width: 215
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bdd81c017dc690488244f3d99bc2877
+      internalID: 14983318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DulceMariaSpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 54
+        width: 233
+        height: 273
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 887f077703735ea4f858c8167241ed15
+      internalID: -1794277972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 596a06fe82442304d900f2591530268e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      DulceMariaSpriteSheet_0: 742803607
+      DulceMariaSpriteSheet_1: 590804170
+      DulceMariaSpriteSheet_10: 715391329
+      DulceMariaSpriteSheet_11: -925784376
+      DulceMariaSpriteSheet_12: 613628204
+      DulceMariaSpriteSheet_13: -1174383991
+      DulceMariaSpriteSheet_14: 1033048339
+      DulceMariaSpriteSheet_15: 2081240641
+      DulceMariaSpriteSheet_16: 235754411
+      DulceMariaSpriteSheet_17: 108525359
+      DulceMariaSpriteSheet_18: 12946705
+      DulceMariaSpriteSheet_19: -1540436350
+      DulceMariaSpriteSheet_2: 1265020619
+      DulceMariaSpriteSheet_20: -725962014
+      DulceMariaSpriteSheet_21: -1644761597
+      DulceMariaSpriteSheet_22: -392412787
+      DulceMariaSpriteSheet_23: 1913625403
+      DulceMariaSpriteSheet_24: 2119220569
+      DulceMariaSpriteSheet_25: 1182550237
+      DulceMariaSpriteSheet_26: -1820134370
+      DulceMariaSpriteSheet_27: 1312009009
+      DulceMariaSpriteSheet_28: -952344650
+      DulceMariaSpriteSheet_29: 2014395909
+      DulceMariaSpriteSheet_3: -50647459
+      DulceMariaSpriteSheet_30: -1507837917
+      DulceMariaSpriteSheet_31: 1115680425
+      DulceMariaSpriteSheet_32: 376828922
+      DulceMariaSpriteSheet_33: 1311182779
+      DulceMariaSpriteSheet_34: 13419866
+      DulceMariaSpriteSheet_35: -2012877269
+      DulceMariaSpriteSheet_36: 272616327
+      DulceMariaSpriteSheet_37: 562482990
+      DulceMariaSpriteSheet_38: -458942379
+      DulceMariaSpriteSheet_39: 18840504
+      DulceMariaSpriteSheet_4: 710663253
+      DulceMariaSpriteSheet_40: 1936084171
+      DulceMariaSpriteSheet_41: 1579447222
+      DulceMariaSpriteSheet_42: -511786114
+      DulceMariaSpriteSheet_43: 287739789
+      DulceMariaSpriteSheet_44: -1740536445
+      DulceMariaSpriteSheet_45: 90712977
+      DulceMariaSpriteSheet_46: 14983318
+      DulceMariaSpriteSheet_47: -1794277972
+      DulceMariaSpriteSheet_5: -1826997732
+      DulceMariaSpriteSheet_6: -838688793
+      DulceMariaSpriteSheet_7: -1691866862
+      DulceMariaSpriteSheet_8: -1915384805
+      DulceMariaSpriteSheet_9: 415537225
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

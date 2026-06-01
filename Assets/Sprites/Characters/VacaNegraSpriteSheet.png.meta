@@ -1,0 +1,851 @@
+fileFormatVersion: 2
+guid: 00116181ef039084c98a68d38940d312
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 590
+        width: 365
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac904c292972384695d159a6dac532f
+      internalID: -924610391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 589
+        width: 338
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78302466eeb02ff4980cc99e80bb524b
+      internalID: 1539965648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 590
+        width: 332
+        height: 264
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9500abb660cda9347b748b9f541ab155
+      internalID: -1070475115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 590
+        width: 399
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0163eed07f0e94eab2cd3624959ae4
+      internalID: -1401039924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 590
+        width: 411
+        height: 254
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03423e622cc0c14db34933df14fd0e8
+      internalID: -114437355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 295
+        width: 510
+        height: 274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890e104fc09f86a4c9b30539ea1f0a3a
+      internalID: -313286922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 295
+        width: 439
+        height: 274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3103aaf7e96864582334572658083b
+      internalID: 881033929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 295
+        width: 408
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 9}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad002e5242b2a2f45b7cfd17a3cee9d8
+      internalID: 690104373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 295
+        width: 419
+        height: 263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594594637ef9ccd48a326e095957d219
+      internalID: -567177141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 1954
+        y: 299
+        width: 395
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4467fc943cb604abec355f80dc0e70
+      internalID: -567780740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 299
+        width: 380
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465ee47b51fe7ad478f42dbe3e0af0ac
+      internalID: 397195873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 15
+        width: 350
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb45805e2dd16d646bf9a8c7ade341af
+      internalID: 1113908677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 15
+        width: 345
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8857d5fdf28d6724f9a01323c03c0fc4
+      internalID: -331839432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 15
+        width: 357
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a8de1584f85bd47a7c23c2506109bd
+      internalID: 505687529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 15
+        width: 365
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19cc17e0982d1de43ac6caf7f37a96c9
+      internalID: -2122420988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_66
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 15
+        width: 386
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5cfa097b2ab05468dff2c6a56f273b
+      internalID: -1580063923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_75
+      rect:
+        serializedVersion: 2
+        x: 2344
+        y: 15
+        width: 381
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33949b3214e095e4e802ef13a7affc64
+      internalID: -2098149398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1194
+        width: 298
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aacbcac22fd4af6479b1f04895cf1dc4
+      internalID: -941381118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 1192
+        width: 298
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 4, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b0e43a980e8ed443a138646a905b330
+      internalID: 1095554414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 1195
+        width: 301
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 14}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9820025fa161458498aa69aecd1306a3
+      internalID: -1415304066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 1194
+        width: 297
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b5fc7bdcfcda849bc274f84e5e9d72
+      internalID: -1009528166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 875
+        width: 305
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2caa06bf1146254392b7b261145e150
+      internalID: 1651044991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 875
+        width: 303
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33e616562ce24e48a928eea149a303e
+      internalID: 1712241950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 882
+        width: 305
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625f46b30a0b633478d3a546b0a9680c
+      internalID: 1293486902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 873
+        width: 310
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6268533209e130645860e87323af60b0
+      internalID: 1182228789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 879
+        width: 306
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 565d509edf676824fa3debf7999c4a47
+      internalID: 1618993982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 887
+        width: 303
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b76d98f01743874d9ebed224c86e0a5
+      internalID: -239042617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 883
+        width: 309
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9359e49974d149e4592f0edc49cbcd32
+      internalID: -1464035721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VacaNegraSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 2438
+        y: 882
+        width: 310
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd45d57ce9aad1747ab3e5a092b20a1b
+      internalID: 1838108511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 728cde4f32f15f54884d4744b9d19382
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      VacaNegraSpriteSheet_0: -941381118
+      VacaNegraSpriteSheet_1: 1095554414
+      VacaNegraSpriteSheet_10: -1464035721
+      VacaNegraSpriteSheet_11: 1838108511
+      VacaNegraSpriteSheet_12: -1273358947
+      VacaNegraSpriteSheet_13: 1327834633
+      VacaNegraSpriteSheet_14: 104374002
+      VacaNegraSpriteSheet_15: -870063516
+      VacaNegraSpriteSheet_16: 407149200
+      VacaNegraSpriteSheet_17: 1959635401
+      VacaNegraSpriteSheet_18: -897768422
+      VacaNegraSpriteSheet_19: -743960123
+      VacaNegraSpriteSheet_2: -1415304066
+      VacaNegraSpriteSheet_20: 1387766705
+      VacaNegraSpriteSheet_21: 1926900042
+      VacaNegraSpriteSheet_22: -202395643
+      VacaNegraSpriteSheet_23: 1895131338
+      VacaNegraSpriteSheet_24: 510901474
+      VacaNegraSpriteSheet_25: 14659883
+      VacaNegraSpriteSheet_26: 1446793491
+      VacaNegraSpriteSheet_27: -698181197
+      VacaNegraSpriteSheet_28: -453455579
+      VacaNegraSpriteSheet_29: -1372439115
+      VacaNegraSpriteSheet_3: -1009528166
+      VacaNegraSpriteSheet_30: 1134325572
+      VacaNegraSpriteSheet_31: -1508052562
+      VacaNegraSpriteSheet_32: 1551245112
+      VacaNegraSpriteSheet_33: 530031972
+      VacaNegraSpriteSheet_34: -154060813
+      VacaNegraSpriteSheet_35: 1066280580
+      VacaNegraSpriteSheet_36: 130648739
+      VacaNegraSpriteSheet_37: 1671448792
+      VacaNegraSpriteSheet_38: -1565379249
+      VacaNegraSpriteSheet_39: -924610391
+      VacaNegraSpriteSheet_4: 1651044991
+      VacaNegraSpriteSheet_40: 1539965648
+      VacaNegraSpriteSheet_41: 1792780333
+      VacaNegraSpriteSheet_42: 619284851
+      VacaNegraSpriteSheet_43: -1070475115
+      VacaNegraSpriteSheet_44: 794964891
+      VacaNegraSpriteSheet_45: -1401039924
+      VacaNegraSpriteSheet_46: -114437355
+      VacaNegraSpriteSheet_47: -6702468
+      VacaNegraSpriteSheet_48: 1094197102
+      VacaNegraSpriteSheet_49: -313286922
+      VacaNegraSpriteSheet_5: 1712241950
+      VacaNegraSpriteSheet_50: -481284196
+      VacaNegraSpriteSheet_51: 881033929
+      VacaNegraSpriteSheet_52: 690104373
+      VacaNegraSpriteSheet_53: -827383722
+      VacaNegraSpriteSheet_54: -567177141
+      VacaNegraSpriteSheet_55: -567780740
+      VacaNegraSpriteSheet_56: 397195873
+      VacaNegraSpriteSheet_57: 1113908677
+      VacaNegraSpriteSheet_58: -1126473270
+      VacaNegraSpriteSheet_59: -1169881440
+      VacaNegraSpriteSheet_6: 1293486902
+      VacaNegraSpriteSheet_60: -331839432
+      VacaNegraSpriteSheet_61: 505687529
+      VacaNegraSpriteSheet_62: 1374935591
+      VacaNegraSpriteSheet_63: 1323322969
+      VacaNegraSpriteSheet_64: -2122420988
+      VacaNegraSpriteSheet_65: -1868710171
+      VacaNegraSpriteSheet_66: -1580063923
+      VacaNegraSpriteSheet_67: -587590399
+      VacaNegraSpriteSheet_68: 366200930
+      VacaNegraSpriteSheet_69: 1736559127
+      VacaNegraSpriteSheet_7: 1182228789
+      VacaNegraSpriteSheet_70: 1859971518
+      VacaNegraSpriteSheet_71: 1322076321
+      VacaNegraSpriteSheet_72: 761031335
+      VacaNegraSpriteSheet_73: -1494090083
+      VacaNegraSpriteSheet_74: 59729492
+      VacaNegraSpriteSheet_75: -2098149398
+      VacaNegraSpriteSheet_76: 1412990747
+      VacaNegraSpriteSheet_77: 1792733285
+      VacaNegraSpriteSheet_78: -573875918
+      VacaNegraSpriteSheet_79: 106210189
+      VacaNegraSpriteSheet_8: 1618993982
+      VacaNegraSpriteSheet_80: 19825874
+      VacaNegraSpriteSheet_9: -239042617
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
