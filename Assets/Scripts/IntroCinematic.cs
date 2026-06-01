@@ -38,6 +38,7 @@ public class IntroCinematic : MonoBehaviour
         var root = uiDocument.rootVisualElement;
         panelDialogo = root.Q<VisualElement>("ContenedorDialogo");
         textoDialogo = root.Q<Label>("TextoDialogo");
+
         if (panelDialogo != null) panelDialogo.style.display = DisplayStyle.None;
     }
 
@@ -82,25 +83,23 @@ public class IntroCinematic : MonoBehaviour
         escala.x = Mathf.Abs(escala.x) * -1f;
         animAmada.transform.localScale = escala;
 
-        // 6. El Intercambio
+        // 6. El Intercambio con tiempos exactos
         animAmada.SetTrigger("GiveFlower");
-        yield return null;
 
-        yield return new WaitUntil(() =>
-            animAmada.GetCurrentAnimatorStateInfo(0).IsName("GivingFlower 0") &&
-            animAmada.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f
-        );
+        // Esperamos exactamente 3.0 segundos para que Amada termine su animación
+        yield return new WaitForSeconds(3.0f);
 
         animDulceMaria.SetTrigger("ReceiveFlower");
-        yield return null;
 
-        yield return new WaitUntil(() =>
-            animDulceMaria.GetCurrentAnimatorStateInfo(0).IsName("ReceivingDulceMaria") &&
-            animDulceMaria.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f
-        );
+        // Esperamos 1.3 segundos para que Dulce María reciba la flor. 
+        // (Nota: Si el 1:30 se refería a 1 segundo y 30 fotogramas a 60FPS, cambia este valor a 1.5f)
+        yield return new WaitForSeconds(1.3f);
 
         // 7. Fin del intercambio
         animAmada.SetBool("NPC_Interacted", true);
+
+        // Le damos 1 frame de cortesía al Animator para que procese el cambio a IdleAfterNPC
+        yield return null;
 
         // 8. Liberar a Amada
         amadaMovement.enabled = true;

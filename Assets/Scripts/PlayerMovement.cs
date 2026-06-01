@@ -4,11 +4,11 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Configuraci�n de Movimiento")]
+    [Header("Configuración de Movimiento")]
     public float moveSpeed = 5f;
     public float jumpForce = 12f;
 
-    [Header("Detecci�n de Suelo")]
+    [Header("Detección de Suelo")]
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
@@ -21,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
     // Variables de Estado
     private Vector2 moveInput;
     private bool isGrounded;
-    private bool facingRight = true;
 
     private void Awake()
     {
@@ -49,12 +48,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Aplicamos el movimiento f�sico aqu�
+        // Aplicamos el movimiento físico aquí
         rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
 
-        // Volteamos el sprite dependiendo de la direcci�n
-        if (moveInput.x > 0 && !facingRight) Flip();
-        else if (moveInput.x < 0 && facingRight) Flip();
+        // Volteamos el sprite usando Volteo Absoluto
+        if (moveInput.x > 0.1f)
+        {
+            // Fuerza a que la escala siempre sea positiva (Mirar a la derecha)
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else if (moveInput.x < -0.1f)
+        {
+            // Fuerza a que la escala siempre sea negativa (Mirar a la izquierda)
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
     }
 
     private void Jump()
@@ -67,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void CheckGround()
     {
-        // Crea un peque�o c�rculo en los pies para detectar la capa "Ground"
+        // Crea un pequeño círculo en los pies para detectar la capa "Ground"
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
     }
 
@@ -81,17 +88,9 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("isGrounded", isGrounded);
     }
 
-    private void Flip()
-    {
-        facingRight = !facingRight;
-        Vector3 localScale = transform.localScale;
-        localScale.x *= -1f;
-        transform.localScale = localScale;
-    }
-
     private void OnDrawGizmosSelected()
     {
-        // Esto dibuja un c�rculo en el editor para que puedas ajustar el tama�o del GroundCheck visualmente
+        // Esto dibuja un círculo en el editor para que puedas ajustar el tamaño del GroundCheck visualmente
         if (groundCheck != null)
         {
             Gizmos.color = Color.red;
