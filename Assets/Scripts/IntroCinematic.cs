@@ -2,11 +2,10 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-// Esta estructura nos permite configurar cada línea en el Inspector
 [System.Serializable]
 public struct LineaDialogo
 {
-    public string hablante; // "Dulce María" o "Amada"
+    public string hablante;
     [TextArea(2, 4)]
     public string texto;
 }
@@ -29,7 +28,7 @@ public class IntroCinematic : MonoBehaviour
     public float tiempoParaLeer = 2.5f;
 
     [Header("Guion de la Escena")]
-    public LineaDialogo[] lineasDeDialogo; // Ahora es una lista de líneas
+    public LineaDialogo[] lineasDeDialogo;
 
     private VisualElement panelDialogo;
     private Label textoDialogo;
@@ -39,7 +38,6 @@ public class IntroCinematic : MonoBehaviour
         var root = uiDocument.rootVisualElement;
         panelDialogo = root.Q<VisualElement>("ContenedorDialogo");
         textoDialogo = root.Q<Label>("TextoDialogo");
-
         if (panelDialogo != null) panelDialogo.style.display = DisplayStyle.None;
     }
 
@@ -67,16 +65,11 @@ public class IntroCinematic : MonoBehaviour
 
         // 4. Inicia la Conversación Dinámica
         panelDialogo.style.display = DisplayStyle.Flex;
-
-        // Este bucle reproduce todas las líneas que configures en el Inspector
         foreach (LineaDialogo linea in lineasDeDialogo)
         {
-            // Detecta si habla Dulce María para activar su animación
             bool hablaNPC = linea.hablante.Contains("Dulce") || linea.hablante.Contains("Maria");
             animDulceMaria.SetBool("isTalking", hablaNPC);
-
             yield return StartCoroutine(EscribirTexto(linea.hablante + ": " + linea.texto));
-
             yield return new WaitForSeconds(tiempoParaLeer);
         }
 
@@ -84,18 +77,32 @@ public class IntroCinematic : MonoBehaviour
         animDulceMaria.SetBool("isTalking", false);
         panelDialogo.style.display = DisplayStyle.None;
 
+        // Volteamos a Amada para que mire hacia Dulce María
+        Vector3 escala = animAmada.transform.localScale;
+        escala.x = Mathf.Abs(escala.x) * -1f;
+        animAmada.transform.localScale = escala;
+
         // 6. El Intercambio
         animAmada.SetTrigger("GiveFlower");
+        yield return null;
 
-        // Esperamos a que la mano de Amada se extienda (ajusta este valor según tu animación)
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitUntil(() =>
+            animAmada.GetCurrentAnimatorStateInfo(0).IsName("GivingFlower 0") &&
+            animAmada.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f
+        );
 
         animDulceMaria.SetTrigger("ReceiveFlower");
-        yield return new WaitForSeconds(0.5f); // Pequeña pausa dramática para que se vea el intercambio
+        yield return null;
 
+        yield return new WaitUntil(() =>
+            animDulceMaria.GetCurrentAnimatorStateInfo(0).IsName("ReceivingDulceMaria") &&
+            animDulceMaria.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f
+        );
+
+        // 7. Fin del intercambio
         animAmada.SetBool("NPC_Interacted", true);
 
-        // 7. Liberar a Amada
+        // 8. Liberar a Amada
         amadaMovement.enabled = true;
     }
 

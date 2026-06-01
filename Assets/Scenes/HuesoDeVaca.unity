@@ -990,9 +990,25 @@ MonoBehaviour:
   uiDocument: {fileID: 527506306}
   velocidadEscritura: 0.04
   tiempoParaLeer: 2.5
-  lineaDulceMaria: "\xA1Amada, mija! Tienes que huir, las cosas en el pueblo se pusieron
-    muy feas. Toma esto y vete r\xE1pido."
-  lineaAmada: "\xA1Para ti, Chonera Linda!"
+  lineasDeDialogo:
+  - hablante: "Dulce Mar\xEDa"
+    texto: "\xA1Amada! Tienes que irte YA de aqu\xED."
+  - hablante: Amada
+    texto: "Hola, disculpa. \xBFTe conozco?"
+  - hablante: "Dulce Mar\xEDa"
+    texto: "Soy Dulce Mar\xEDa, pero eso ya no importa, \xA1Tienes que correr YA!"
+  - hablante: Amada
+    texto: "C\xE1lmate, \xBFQu\xE9 ocurre...?"
+  - hablante: "Dulce Mar\xEDa"
+    texto: "Es la Vaca Negra, tengo algo que le pertence. Ll\xE9valo al \xE1rbol
+      muerto al final del camino, pero ten cuidado: lo ajeno pesa, y mientras m\xE1s
+      te alejas, m\xE1s fuerte reclama el camino de vuelta a casa."
+  - hablante: Amada
+    texto: Entiendo, pero antes...
+  - hablante: "Dulce Mar\xEDa"
+    texto: "\xBFAntes qu\xE9? \xA1Corre!"
+  - hablante: Amada
+    texto: "\xA1Para ti, Chonera Linda!"
 --- !u!4 &1451821599
 Transform:
   m_ObjectHideFlags: 0
